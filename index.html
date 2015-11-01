@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>魔女とラフレンツェ</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(192, 192, 192); overflow: auto; background-color: rgb(33, 37, 40); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(151, 151, 151); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(167, 225, 80); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(151, 151, 151); border-color: rgb(70, 78, 85); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(70, 78, 85); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(70, 78, 85); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(51, 58, 62); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(42, 47, 51); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(70, 78, 85) rgb(70, 78, 85) rgb(56, 63, 68); background-color: rgb(51, 58, 62); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: normal; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: ' '; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.markdown-preview code { text-shadow: none; }
+.markdown-preview.markdown-preview { padding: 5% 10%; background-color: rgb(238, 238, 238); }
+.markdown-preview.markdown-preview p, .markdown-preview.markdown-preview strong { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1em; color: rgb(0, 0, 0); }
+.markdown-preview.markdown-preview a { color: inherit; }
+.markdown-preview.markdown-preview hr { border-style: solid; border-color: rgb(156, 137, 142); background-color: rgb(156, 137, 142); }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+
+pre.editor-colors,
+.host {
+  background-color: #212528;
+  color: #c0c0c0;
+}
+pre.editor-colors .gutter,
+.host .gutter {
+  background-color: #212528;
+  color: #666666;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  background-color: #404040;
+  color: #dcdcdc;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  color: #dcdcdc;
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  color: #3b3a32;
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: #3b3a32;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: #3b3a32;
+}
+pre.editor-colors .search-results .marker .region,
+.host .search-results .marker .region {
+  background-color: transparent;
+  border: #3b3a32;
+}
+pre.editor-colors .search-results .marker.current-result .region,
+.host .search-results .marker.current-result .region {
+  border: #eeeeee;
+}
+pre.editor-colors.is-focused .cursor,
+.host(.is-focused) .cursor {
+  border-color: #a7e150;
+}
+pre.editor-colors.is-focused .selection .region,
+.host(.is-focused) .selection .region {
+  background-color: rgba(70, 70, 70, 0.8);
+}
+pre.editor-colors.is-focused .line-number.cursor-line-no-selection,
+pre.editor-colors.is-focused .line.cursor-line,
+.host(.is-focused) .line-number.cursor-line-no-selection,
+.host(.is-focused) .line.cursor-line {
+  background-color: #333435;
+}
+.comment {
+  color: #777c82;
+}
+.constant.numeric {
+  color: #C7AF3F;
+}
+.constant.language {
+  color: #C7AF3F;
+}
+.constant.numeric.line-number.find-in-files:not(.match) {
+  color: rgba(143, 190, 0, 0.63);
+}
+.constant.character,
+.constant.other {
+  color: #cc7832;
+}
+.entity.name.class {
+  text-decoration: underline;
+  color: #C7AF3F;
+}
+.entity.other.inherited-class {
+  text-decoration: underline;
+  color: #C7AF3F;
+}
+.entity.name.function {
+  color: #C7AF3F;
+}
+.entity.name.tag,
+.punctuation.definition.tag,
+.keyword.control.html.elements {
+  color: #c5b363;
+}
+.entity.name.tag.scss,
+.entity.name.tag.css {
+  color: #cc7832;
+}
+.entity.name.type.instance {
+  color: $pink;
+}
+.entity.other.attribute-name {
+  color: #9caf88;
+}
+.entity.other.attribute-name.pseudo-class.css {
+  color: #a1617a;
+}
+.entity.other.attribute-name.attribute {
+  color: #7497be;
+}
+.entity.other.attribute-name.placeholder.scss {
+  color: #5a647e;
+}
+.entity.name.filename.find-in-files {
+  color: #E6DB74;
+}
+.invalid {
+  color: #F8F8F0;
+  background-color: #00A8C6;
+}
+.invalid.deprecated {
+  color: #F8F8F0;
+  background-color: #8FBE00;
+}
+.keyword {
+  color: #9FB3C2;
+}
+.keyword.control,
+.parameter {
+  color: #a1617a;
+}
+.keyword.operator {
+  color: #e9967a;
+}
+.keyword.other.important {
+  color: #ae5555;
+}
+.markup.deleted {
+  color: #00A8C6;
+}
+.markup.inserted {
+  color: #A6E22E;
+}
+.markup.changed {
+  color: #E6DB74;
+}
+.meta.property-group .support.constant.property-value.css,
+.meta.property-list.css .meta.property-value.css,
+.meta.property-value .support.constant.property-value.css,
+.meta.property-group .support.constant.property-value.scss,
+.meta.property-value .support.constant.property-value.scss,
+.constant.numeric.css,
+.constant.numeric.scss,
+.variable.parameter.misc.css,
+.parameter.less.data-uri .comment .markup.raw,
+.source.less .meta.property-value.css,
+.meta.embedded.line.php {
+  color: #c0c0c0;
+}
+.meta.constructor.argument.css,
+.meta.constructor.argument.scss {
+  color: #8F9D6A;
+}
+.meta.function-call {
+  color: #c5a6bf;
+}
+.meta.preprocessor.at-rule .keyword.control.at-rule,
+.meta.at-rule.import,
+.keyword.control.at-rule {
+  color: #8693A5;
+}
+.meta.structure.dictionary.json .string.quoted.double.json {
+  color: #CFCFC2;
+}
+.meta.diff,
+.meta.diff.header {
+  color: #75715E;
+}
+.punctuation.section.embedded.begin.php,
+.punctuation.section.embedded.end.php {
+  color: #CF6A4C;
+}
+.punctuation.terminator.rule,
+.punctuation.separator.key-value,
+.support.constant.mathematical-symbols.scss,
+.support.constant.mathematical-symbols.css,
+.punctuation.section.function,
+.punctuation.terminator.expression.php {
+  color: #dedede;
+}
+.source.asp.embedded.html {
+  color: #CF6A4C;
+}
+.source.scss .entity.other.attribute-name.placeholder.scss {
+  color: #8F9D6A;
+}
+.source.scss .meta.set.variable .variable,
+.variable.scss {
+  color: #c07a7a;
+}
+.storage {
+  color: #9FB3C2;
+}
+.storage.type {
+  color: #e1a170;
+}
+.string,
+.constant.character.escape,
+.punctuation.parameters {
+  color: #7592a3;
+}
+.support.constant.named-color,
+.meta.property-value .constant,
+.keyword.other.unit,
+.constant.other.color.rgb-value {
+  color: #a4b3ca;
+}
+.support.type.property-name.css,
+.support.type.property-name.scss,
+.meta.property-list.css .meta.property-name.css,
+.meta.property-list.scss .meta.property-name.scss {
+  color: #C5AF75;
+}
+.support.function {
+  color: #C7AF3F;
+}
+.support.constant {
+  color: #C7AF3F;
+}
+.support.type,
+.support.class {
+  color: #C7AF3F;
+}
+.variable {
+  color: #b57b91;
+}
+.variable.parameter {
+  color: #C7AF3F;
+}
+.meta.structure.dictionary.json .string.quoted.double.json {
+  color: #E19951;
+}
+.meta.structure.dictionary.value.json .string.quoted.double.json {
+  color: #8F9D6A;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><p><img src="https://raw.githubusercontent.com/Jarvie8176/Elysion-Translation/master/assets/images/majyo_to_rafurentse_0.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/Jarvie8176/Elysion-Translation/master/assets/images/majyo_to_rafurentse_1.jpg"></p>
+<hr>
+<p><img src="https://raw.githubusercontent.com/Jarvie8176/Elysion-Translation/master/assets/images/majyo_to_rafurentse_2.jpg"></p>
+<p><strong>如何にして　楽園の扉は開かれたのか……</strong></p>
+<p><strong>乐园的门扉是怎样被打开的呢……</strong></p>
+<p>A.E. -19年</p>
+<hr>
+<p>干枯的树枝般的手指抚摸在坚木般的皮肤上。</p>
+<p>遮挡了阳光的深绿树叶被风吹弄着沙沙作响。</p>
+<p>老迈的女人眯着独眼，指甲嵌进树皮。</p>
+<p>这样刻上的痕迹，最终也随着被剥落的树皮荡然无存。</p>
+<p>不祥的鸣叫声骤然传来。</p>
+<p>展开黑翼的乌鸦落在老迈女人的肩上。</p>
+<p>「オルドローズ，オルドローズ」</p>
+<p>「怎么了，ムニン……」</p>
+<p>「オルドローズ」</p>
+<p>「呵呵……」</p>
+<p>老迈的女人讪笑起来。</p>
+<p>被她取名为ムニン的乌鸦，虽能像听懂人话般回答，说到底是擅长模仿声音也不为过。</p>
+<p>「『有深红的魔女之称的（绯红的）』オルドローズ<sup>1</sup>」</p>
+<p>「明明让你不要再说了……」</p>
+<p>然而，教会ムニン这个名字的人应该是她自己。ムニン本不应知道她很久以前的别名。</p>
+<p>深红的魔女。</p>
+<p>尽管已经上了年纪，她的头发仍像年轻时一样及腰长，眼中也保留着浓郁的鲜红而妖异的光泽。</p>
+<p>即使有着被挖去的单眼作为惩罚的象征，她已忘记了犯下的罪孽。</p>
+<p>已经过去很长的时间了。</p>
+<p>她的皮肤不再吹弹可破，变得满是褶皱。</p>
+<p>「『记忆』（ムニン）<sup>2</sup>」</p>
+<p>オルドローズ和肩上的乌鸦搭话。</p>
+<p>「用很久以前的……令人不快的，在遥远的过去就舍弃的名字叫我这种事，别再做了」</p>
+<p>「オルドローズ，为什么呀，オルドローズ」</p>
+<p>「总之，别再做了」</p>
+<p>「啊啊哈哈哈。啊啊哈哈哈」</p>
+<p>教会ムニン那个讪笑声的也是オルドローズ吧。和她的声音的确有相像之处。但她是否曾在ムニン面前如此讪笑过呢。</p>
+<p>「上了年纪了啊……」</p>
+<p>オルドローズ让干枯树枝般的手指在胸前到腹间爬动了一遍。她把着黑色的晚礼服裹在身上；不对，应该说是<strong><em>曾经是黑色</em></strong>吧。经年累月，曾经漆黑的晚礼服已成夜鸢般的黑棕色。</p>
+<p>她曾经丰满的乳房，已然萎缩垂下。</p>
+<p>虽然已经消瘦到摸上去能感受到肋骨形状的程度，但盘绕着她下腹的肉干般的赘肉，大概用火烧也烧不尽。</p>
+<p>オルドローズ曾经是，现在也是魔女。普通人应该是无法像她那样，保持着绝对的贞洁、进行着特别的修行、摄取着自制的秘药，一直作为魔女活到这个岁数的吧。</p>
+<p>但是，魔女也已经上了年纪。</p>
+<p>「ムニン」</p>
+<p>「オルドローズ。怎么了呀，オルドローズ。」</p>
+<p>「以后再叫我『有深红的魔女之称的（绯红的）』オルドローズ之类的试试？我会把你逮起来，拔掉羽毛烤着吃掉哦」</p>
+<p>ムニン黑色的眼睛凝视着オルドローズ。</p>
+<p>眨着眼睛，轻歪了头。</p>
+<p>「唉……和畜牲说这个也是白说」</p>
+<p>「畜生。オルドローズ。畜生。那是在说你吗？」</p>
+<p>「这不明摆着是说你吗，ムニン。真是笨蛋啊。好吧……」</p>
+<p>オルドローズ就这样让乌鸦停在肩上走起来。她的背直了起来；将背伸直，与在这边境的古老森林里徘徊，都曾是对变老的抵抗。而无论进行了怎样的抗争，时间也无情地流逝；她所剩的寿命被渐渐挖去，她像是生命被耗尽般走向死亡。</p>
+<p>向着终焉。</p>
+<p>啊啊，然而，将魔女的耳朵抓挠的<strong><em>那个声音</em></strong>，是连些微的终结也不可预感得到的，起始的响声！</p>
+<p>オルドローズ停下脚步，寻找声音的源头。</p>
+<p>ムニン像乌鸦应有的样子“卡——”地叫了一声。如在回应这叫声般，那个声音更响了。オルドローズ向着发出声音的方向走去。“卡——”，“卡——”，“卡——”，ムニン接连叫着。那个声音跟着回应。</p>
+<p>「无法令人相信的事情也是存在的啊……」</p>
+<p>不久，オルドローズ伫立在了一棵巨树前。</p>
+<p>巨树的根部如大量的蛇般相互纠缠隆起着，在地上蜷滚着钻向土里。</p>
+<p>在地上根的间隙中，婴儿如嵌入般躺在里面。</p>
+<p>除了灰色的襁褓，身上没有任何东西；攥紧小小的拳头，婴儿紧闭着眼睛哭闹着。</p>
+<p>「是谁做了这样的事……」</p>
+<p>「オルドローズ。啊啊哈哈哈。<strong><em>难道不是你吗</em></strong>。オルドローズ」</p>
+<p>「……你说是，我？」</p>
+<p>魔女倒吸了一口气。</p>
+<p>难道不是你吗。那大概是オルドローズ曾经向着ムニン诉说的话吧。ムニン只是从口中说出了而已。应该只是这样。不带有任何意思。</p>
+<p>当然，丢弃了这个婴儿的不是オルドローズ。在这片森林也会见到有人出没，但婴儿已经很久没见到过了。</p>
+<p>魔女为了保持魔力没有生孩子，而她也没有亲戚。</p>
+<p>会把婴儿抱在自己怀里这种事，完全不曾想过。</p>
+<p>「……抱起来？我，把这个婴儿？」</p>
+<p>没错。</p>
+<p>魔女弯下身，像是向着婴儿伸出手般。</p>
+<p>「别这样呀，オルドローズ。停下来。オルドローズ。」</p>
+<p>ムニン拍打着翅膀从魔女的肩上飞了起来。乌鸦的话之类不足为意。然而，现在应不应该听从那个忠告？魔女犹豫了。</p>
+<p>（抱起这个婴儿，你打算要做什么呢？オルドローズ？）</p>
+<p>问向自己，却冒不出答案。难道是想抱走救这孩子？这孩子一定还是个乳儿，奶水要怎么办？动用她的魔力的话，让带孩子的野兽服从命令不费吹灰之力。但人类之子能用走兽的乳汁养育吗？识遍百草、通晓星事、由云流树动知天候、以咒术改命理的魔女，竟然连这点事也无法判断。</p>
+<p>无法判断。但无知即是恐惧之源，魔女还是知道的。</p>
+<p>与婴儿相关的事，魔女一无所知。</p>
+<p>因而，魔女感到了惶恐。</p>
+<p>身为魔女的オルドローズ，因人类的弱小婴儿而战栗着！</p>
+<p>抚育这令人惊惧的婴儿之类的事，终究是不可能的。尽管如此，为何她却似乎向着婴儿伸出手呢。</p>
+<p>抱起绞尽全身的力气哭喊着的婴儿，是要做什么？</p>
+<p>「反正，你也应该没法活下去吧……」</p>
+<p>即使置之不理，这个婴儿也是会死的。</p>
+<p>那就把这孩子抱起，勒紧脖子，现在就令其解脱吧？</p>
+<p>「啊……！」</p>
+<p>魔女用干枯的双手掩面，手心湿润了。无法再被吸收的泪水从指间溢出。</p>
+<p>（我竟然会哭……！我オルドローズ竟然……！）</p>
+<p>这还只是想像了，将手放在婴儿纤细的脖颈上施力的景象；只是婴儿窒息着无法发声，一条渺小的生命没多久就会消失的事吧。仅仅想像了一番这景象，已让魔女感到撕心裂肺。</p>
+<p>迫不及待地，魔女搂抱起婴儿。</p>
+<p>「哦哦，竟然……竟然会如此的小……真轻……你可真是轻呀……」</p>
+<p>婴儿不停不歇地哭泣着。尝试着抱孩子的方法，魔女却完全不知所措。这样抱着好还是不好，甚至连究竟有没有正确的抱法，魔女也不清楚。</p>
+<p>「乖，乖，哟哟，别哭了呀，拜托了呀，我说，你呀，已经没事了哦，已经没事了，不会有不好的事了，真的呀，我这魔女所说的话当然是不会错的。所以呢……」</p>
+<p>或是轻摇、或是将脸凑近拉远、或是搭话、或是“嘁嘁嘁”地咂舌之间，婴儿总算像是重新安定下来了；不，并不是那样，大概是因为哭累了吧。</p>
+<p>婴儿双眼闭上，嘴唇仍然翕动着，但已不出声了。</p>
+<p>「想睡了吗，你呀。是吗，是吗。去睡就好。这段时间里，老太婆去想办法找能给你喝的奶水吧。唉，如果我再年轻些的话……」</p>
+<p>说着说着，オルドローズ含着泪，因盈眶的泪水而深深动摇。</p>
+<p>「再年轻些的话……那又如何呢？还能给这孩子哺乳？让我这魔女……老太婆来吗。说来也对，我已经老得不能当母亲了。当婆婆更适合吧……」</p>
+<p>抱着婴儿，缓慢而谨慎地走着，魔女编构起故事。她是这孩子的婆婆。由于某些原因，孩子的母亲不得不抛下婴儿离开了。因此，身为婆婆的她代替母亲养育着婴儿。如此陈词滥调般的故事，魔女总有一天会如愚蠢的庸人般，说给这孩子听吧。</p>
+<p>婴儿的眼睛是浓郁的绯红色，魔女对此察觉到了。而这究竟是怎么回事呢？</p>
+<p>（你是，我的孩子……）</p>
+<hr>
+<p><img src="https://raw.githubusercontent.com/Jarvie8176/Elysion-Translation/master/assets/images/majyo_to_rafurentse_3.jpg"></p>
+<ul>
+<li><p><sup>1</sup>『有深红的魔女之称的（绯红的）』オルドローズ：为原词中“クリムゾンのオルドローズ”。</p>
+</li>
+<li><p><sup>2</sup>『记忆』（ムニン）：为北欧神话中意为“记忆”的乌鸦，见：<a href="https://zh.wikipedia.org/wiki/%E7%A6%8F%E9%87%91%E5%92%8C%E9%9C%A7%E5%B0%BC"><em>福金和雾尼</em></a>。</p>
+</li>
+</ul>
+<hr></body>
+</html>
